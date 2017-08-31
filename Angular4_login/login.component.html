@@ -1,0 +1,71 @@
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nomargin nopadding">
+  <div class="title-container layers-parallax bg_pos">
+    <section id="" class="error-page">
+
+
+
+  <div class="">
+    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+    
+
+      <h1 class="text-center white font-lg myfonts margin_top_65">Login</h1>
+      <h6 class="card-subtitle text-center white margin_t10">Login and start your journey</h6>
+
+      <form class="" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate >
+
+      
+       <div class="row text-center padding-20">
+
+        <div class="col-lg-6 col-md-5 col-sm-8 col-xs-8 margin-top bg_black getcenter">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div  class="col-lg-5 col-md-12 col-sm-12 col-xs-12 padding-5">
+                <div class="form-group" [ngClass]="{ 'has-danger': f.submitted && !email.valid, 'has-success': f.submitted && !email.valid }">
+                  <input type="email" class="form-control " id="email" name="email"
+                         placeholder="Email Address" [(ngModel)]="model.email" #email="ngModel" required
+                         pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                  <div *ngIf="f.submitted && !email.valid && email.errors.required" class="text-danger text-left">This field is required
+                  </div>
+                  <div *ngIf="f.submitted  && !email.valid && email.errors.pattern" class="text-danger text-left">Email is invalid
+                  </div>
+
+                </div>
+
+              </div>
+              <div  class="col-lg-5 col-md-12 col-sm-12 col-xs-12 padding-5">
+                <div class="form-group" [ngClass]="{ 'has-danger': f.submitted && !password.valid, 'has-success': f.submitted && !password.valid }">
+                      <input type="password" class="form-control" id="password" name="password"
+                             placeholder="Password" [(ngModel)]="model.password" #password="ngModel" required>
+                      <div *ngIf="f.submitted && !password.valid && password.errors.required" class="text-danger text-left">This field is required
+                    </div>
+
+                    </div>
+
+              </div>
+                <div  class="col-lg-2 col-md-12 col-sm-12 col-xs-12 padding-5 text-center">
+                  <div>
+                    <button type="submit" class="btn btn-info btn-sm button_pad btn-block" [disabled] = "buttonVisibility">Login</button>
+                  </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center nopadding nomargin">
+                 <p class="white text_pad">Your username is your email</p>
+                 </div>
+                </div>
+
+              </div>
+              </div>
+
+       
+</div>
+
+      </form>
+
+
+    </div>
+  </div>
+
+</section>
+    </div>
+    </div>
